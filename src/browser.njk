@@ -1,0 +1,27 @@
+---
+layout: base.njk
+---
+<h1>This fetches data on client load from api</h1>
+<p>
+    Go <a href="/">Back</a>
+</p>
+<form>
+    <label for="note">Note</label>
+    <input type="text" name="note" id="note" placeholder="Write something...">
+    <label for="tag">Tag</label>
+    <select name="tag" id="tag">
+        <option value="work">Work</option>
+    </select>
+    <button type="submit">Submit</button>
+</form>
+
+<div id="loading">
+    <p>loading...</p>
+</div>
+
+<template>
+    {% set note = {} %}
+    {% include "components/note.njk" %}
+</template>
+
+<script src="/js/bundle.js"></script>
