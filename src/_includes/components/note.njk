@@ -1,0 +1,10 @@
+{% if note %}
+<div class="note">
+    <div class="note__body">
+        <p>{{ note.note }}</p>
+    </div>
+    <div class="note__footer">
+        <p>{{ note.createdAt }}</p>
+    </div>
+</div>
+{% endif %}
