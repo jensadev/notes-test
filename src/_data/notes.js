@@ -6,7 +6,7 @@ module.exports = async () => {
 
         /* This returns a promise */
         return Cache(url, {
-            duration: '1d',
+            duration: '1m',
             type: 'json'
         });
     } catch (e) {
@@ -15,3 +15,4 @@ module.exports = async () => {
         };
     }
 };
+
