@@ -8,8 +8,9 @@ const handleErrors = (response) => {
 const addNoteElement = (data={}) => {
     const template = document.querySelector('template');
     let clone = template.content.cloneNode(true);
-    clone.querySelector('.note__body > p').textContent = data.note;
-    clone.querySelector('.note__footer > p').textContent = data.createdAt;
+    clone.querySelector('.note__date').textContent = data.updatedAt;
+    clone.querySelector('.note__text').textContent = data.note;
+    clone.querySelector('.note__footer > p').textContent = data.tag;
     document.querySelector('main').appendChild(clone);
 }; 
 
@@ -69,6 +70,7 @@ window.addEventListener('load', () => {
             .then((data) => {
                 console.log(data);
                 addNoteElement(data);
+                form.reset();
             })
             .catch((error) => {
                 console.error(error);

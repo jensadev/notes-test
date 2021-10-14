@@ -6,12 +6,17 @@ layout: base.njk
     Go <a href="/">Back</a>
 </p>
 <form>
-    <label for="note">Note</label>
-    <input type="text" name="note" id="note" placeholder="Write something...">
-    <label for="tag">Tag</label>
-    <select name="tag" id="tag">
-        <option value="work">Work</option>
-    </select>
+    <div>
+        <label for="note">Note</label>
+        <input type="text" name="note" id="note" placeholder="Write something...">
+    </div>
+    <div>
+        <label for="tag">Tag</label>
+        <select name="tag" id="tag">
+            <option value="work">Work</option>
+            <option value="shopping">Shopping</option>
+        </select>
+    </div>
     <button type="submit">Submit</button>
 </form>
 

@@ -1,10 +1,11 @@
 {% if note %}
 <div class="note">
     <div class="note__body">
-        <p>{{ note.note }}</p>
+        <h5 class="note__date">{{ note.updatedAt }}</h5>
+        <p class="note__text">{{ note.note }}</p>
     </div>
     <div class="note__footer">
-        <p>{{ note.createdAt }}</p>
+        <p>{{ note.tag }}</p>
     </div>
 </div>
 {% endif %}
